@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobili Lamborghini - Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans min-h-screen flex flex-col">
+    <!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm">
+    <div class="flex items-center justify-between px-6 md:px-12 py-4 md:py-6">
+        <button id="menuBtn" class="flex items-center gap-2 text-white hover:text-yellow-400 transition-all duration-300 group">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <span class="font-bold text-xs md:text-sm tracking-widest">MENU</span>
+        </button>
+        
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+            <a href="index.html">
+                <img src="img/logolamborghini.svg" alt="Lamborghini Logo" class="h-10 md:h-14 w-auto">
+            </a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="text-white hover:text-yellow-400 transition-colors duration-300">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+            </button>
+            <button class="text-white hover:text-yellow-400 transition-colors duration-300">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Side Menu -->
+<div id="sideMenu" class="fixed inset-0 z-40 hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="menuOverlay"></div>
+    <div class="absolute left-0 top-0 h-full w-80 bg-black transform -translate-x-full transition-transform duration-300" id="menuPanel">
+        <div class="p-8">
+            <button id="closeMenu" class="text-white hover:text-yellow-400 mb-8">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <ul class="space-y-4">
+                <li><a href="index.html" class="text-white hover:text-yellow-400 transition duration-300 text-lg font-bold tracking-wide">HOME</a></li>
+                <li><a href="biodata.html" class="text-white hover:text-yellow-400 transition duration-300 text-lg font-bold tracking-wide">BIODATA</a></li>
+                <li><a href="contact_us.html" class="text-white hover:text-yellow-400 transition duration-300 text-lg font-bold tracking-wide">CONTACT US</a></li>
+                <li><a href="posts.html" class="text-white hover:text-yellow-400 transition duration-300 text-lg font-bold tracking-wide">POSTS</a></li>
+                <li><a href="freepage.html" class="text-white hover:text-yellow-400 transition duration-300 text-lg font-bold tracking-wide">FREE PAGE</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuPanel = document.getElementById('menuPanel');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function openMenu() {
+        sideMenu.classList.remove('hidden');
+        setTimeout(() => {
+            menuPanel.classList.remove('-translate-x-full');
+        }, 10);
+    }
+
+    function closeMenuFn() {
+        menuPanel.classList.add('-translate-x-full');
+        setTimeout(() => {
+            sideMenu.classList.add('hidden');
+        }, 300);
+    }
+
+    menuBtn.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuFn);
+    menuOverlay.addEventListener('click', closeMenuFn);
+    </script>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="h-screen relative overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="img/lambo.gif" alt="Hero Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
+            </div>
+            
+            <div class="relative h-full flex flex-col justify-between px-6 md:px-12 py-24 md:py-32">
+                <div class="mt-8">
+                    <p class="text-gray-300 text-xs md:text-sm tracking-widest mb-4">FEW OFFS DESIGN</p>
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight tracking-tight">
+                        <span class="text-gray-400">LAMBORGHINI</span><br>
+                        <span class="text-white">REVUELTO</span><br>
+                        <span class="text-gray-400">2024 COLLECTION</span>
+                    </h1>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-6 md:px-8 py-3 md:py-4 flex items-center gap-3 transition-all duration-300 uppercase tracking-wider text-sm">
+                        <span>DISCOVER MORE</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-2">
+                            <div class="w-16 md:w-20 h-0.5 bg-white"></div>
+                            <div class="w-16 md:w-20 h-0.5 bg-white/30"></div>
+                            <div class="w-16 md:w-20 h-0.5 bg-white/30"></div>
+                            <div class="w-16 md:w-20 h-0.5 bg-white/30"></div>
+                        </div>
+                        
+                        <button class="w-12 h-12 md:w-14 md:h-14 border-2 border-white hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center" style="clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Models Section -->
+        <section class="bg-white text-black py-12 md:py-20">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 md:mb-16 gap-4">
+                    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-wide">MODELS</h2>
+                    <a href="#" class="flex items-center gap-2 text-xs md:text-sm font-bold tracking-wider border-b-2 border-black pb-1 hover:text-yellow-600 hover:border-yellow-600 transition-all duration-300">
+                        <span>DISCOVER ALL MODELS</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="flex justify-center mb-8">
+                    <div class="text-3xl md:text-4xl font-black tracking-widest">TEMERARIO</div>
+                </div>
+
+                <h3 class="text-center text-3xl md:text-5xl lg:text-6xl font-black uppercase mb-12 md:mb-16 tracking-tight text-gray-800">
+                    YOU CAN'T HIDE WHO YOU ARE
+                </h3>
+
+                <div class="relative flex items-center justify-center mb-12 md:mb-16">
+                    <button class="absolute left-0 md:left-4 w-12 h-12 md:w-16 md:h-16 border-2 border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center z-10" style="clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+
+                    <div class="flex items-center justify-center w-full px-16 md:px-32">
+                        <div class="w-1/4 opacity-20 hidden md:block">
+                            <img src="img/mobil5.webp" alt="Car 1" class="w-full h-auto object-cover">
+                        </div>
+
+                        <div class="w-full md:w-2/4 px-2 md:px-8">
+                            <img src="img/mobil1.webp" alt="Main Car" class="w-full h-auto object-cover">
+                        </div>
+
+                        <div class="w-1/4 opacity-20 hidden md:block">
+                            <img src="img/mobil2.webp" alt="Car 2" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+
+                    <button class="absolute right-0 md:right-4 w-12 h-12 md:w-16 md:h-16 border-2 border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center z-10" style="clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                    <a href="https://unai.edu/" target="_blank" class="w-full md:w-auto bg-yellow-600 hover:bg-yellow-700 text-white font-bold px-8 md:px-10 py-3 md:py-4 flex items-center justify-center gap-3 transition-all duration-300 uppercase tracking-wider text-sm">
+                        <span>WEBSITE UNAI</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="https://fti.unai.edu/" target="_blank" class="w-full md:w-auto bg-white border-2 border-black hover:bg-black hover:text-white text-black font-bold px-8 md:px-10 py-3 md:py-4 flex items-center justify-center gap-3 transition-all duration-300 uppercase tracking-wider text-sm">
+                        <span>WEBSITE FTI UNAI</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mt-12 md:mt-16 text-xs text-gray-500 leading-relaxed">
+                    <p>Energy consumption (weighted combined): 4,3 kWh/100 Km plus 11,2 l/100km; CO₂ emissions (weighted combined): 272 g/km; CO₂ class (weighted combined): G; CO₂ class with discharged battery: G; Fuel consumption with discharged battery (combined): 14 l/100km</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dealer Locator Section -->
+        <section class="relative h-48 md:h-64 overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="img/mobil3.jpg" alt="Dealer Locator Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <div class="relative h-full flex items-center px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-wide text-white">DEALER LOCATOR</h2>
+                    <button class="bg-white hover:bg-gray-200 text-black font-bold px-8 md:px-10 py-3 md:py-4 flex items-center gap-3 transition-all duration-300 uppercase tracking-wider text-sm">
+                        <span>FIND YOUR DEALER</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configure Section -->
+        <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-16 md:py-20">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-12 md:mb-16">
+                    <button class="text-sm font-bold tracking-wider pb-2 border-b-2 border-yellow-500 text-white uppercase">TEMERARIO</button>
+                    <button class="text-sm font-bold tracking-wider pb-2 border-b-2 border-transparent text-gray-400 hover:text-white transition-all duration-300 uppercase">REVUELTO</button>
+                    <button class="text-sm font-bold tracking-wider pb-2 border-b-2 border-transparent text-gray-400 hover:text-white transition-all duration-300 uppercase">URUS SE</button>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div>
+                        <p class="text-sm tracking-widest text-gray-400 mb-3 uppercase">CONFIGURE YOUR</p>
+                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase mb-8 md:mb-12 tracking-tight">TEMERARIO</h2>
+                        
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 md:px-10 py-3 md:py-4 flex items-center justify-center gap-3 transition-all duration-300 uppercase tracking-wider text-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                </svg>
+                                <span>START CONFIGURATION</span>
+                            </button>
+                            <button class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold px-8 md:px-10 py-3 md:py-4 flex items-center justify-center gap-3 transition-all duration-300 uppercase tracking-wider text-sm">
+                                <span>EXPLORE THE MODEL</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="img/mobil4.webp" alt="Temerario Car" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <div class="mt-12 md:mt-16 text-xs text-gray-500 leading-relaxed">
+                    <p>Energy consumption (weighted combined): 4,3 kWh/100 Km plus 11,2 l/100km; CO₂ emissions (weighted combined): 272 g/km; CO₂ class (weighted combined): G; CO₂ class with discharged battery: G; Fuel consumption with discharged battery (combined): 14 l/100km</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News/Stories Section -->
+        <section class="bg-white text-black py-12 md:py-20">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <!-- Story Card 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden mb-4">
+                            <img src="img/story1.jpg" alt="Story 1" class="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">MIURA</span>
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">POLO STORICO</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wide">1 DECEMBER 2025</p>
+                        <h3 class="text-lg md:text-xl font-bold uppercase leading-tight group-hover:text-yellow-600 transition-colors duration-300">TURIN MOTOR SHOW 1965: THE CHASSIS THAT IGNITED THE MIURA LEGEND</h3>
+                    </div>
+
+                    <!-- Story Card 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden mb-4">
+                            <img src="img/story2.webp" alt="Story 2" class="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">CORPORATE</span>
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">BEYOND</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wide">28 NOVEMBER 2025</p>
+                        <h3 class="text-lg md:text-xl font-bold uppercase leading-tight group-hover:text-yellow-600 transition-colors duration-300">GENDER EQUALITY: LAMBORGHINI RECONFIRMS ITS CERTIFICATION</h3>
+                    </div>
+
+                    <!-- Story Card 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden mb-4">
+                            <img src="img/story3.webp" alt="Story 3" class="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">STORIES</span>
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">LIMITED SERIES</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wide">26 NOVEMBER 2025</p>
+                        <h3 class="text-lg md:text-xl font-bold uppercase leading-tight group-hover:text-yellow-600 transition-colors duration-300">LAMBORGHINI FEW-OFFS: WHEN A RARITY TURNS INTO A PASSION</h3>
+                    </div>
+
+                    <!-- Story Card 4 -->
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden mb-4">
+                            <img src="img/story4.webp" alt="Story 4" class="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-300 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">DESIGN</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wide">19 NOVEMBER 2025</p>
+                        <h3 class="text-lg md:text-xl font-bold uppercase leading-tight group-hover:text-yellow-600 transition-colors duration-300">HOT WHEELS DRIVING DESIGN WITH MITJA BORKERT</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-3 mt-12">
+                    <div class="w-16 md:w-20 h-0.5 bg-black"></div>
+                    <div class="w-16 md:w-20 h-0.5 bg-gray-300"></div>
+                    <div class="w-16 md:w-20 h-0.5 bg-gray-300"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 md:py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <!-- Footer Links Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+                <!-- Column 1 -->
+                <div class="space-y-5">
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">COMPANY</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">SUSTAINABILITY</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">COOKIE SETTINGS</a>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-5">
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">FINANCIALS</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">MEDIA CENTER</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">SITEMAP</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-5">
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">CAREERS</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">PRIVACY & LEGAL</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">NEWSLETTER</a>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="space-y-5">
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">CONTACT US</a>
+                    <a href="#" class="block text-sm font-bold tracking-wider hover:text-gray-400 transition-colors duration-300 uppercase">ACCESSIBILITY</a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 my-8"></div>
+
+            <!-- Social Media Section -->
+            <div class="mb-12">
+                <p class="text-sm font-bold mb-6 tracking-wider uppercase">Follow us on:</p>
+                <div class="flex flex-wrap gap-6">
+                    <!-- Instagram -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Threads -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.542-1.891-1.479-3.322-2.788-4.255-1.373-1.018-3.212-1.556-5.468-1.556h-.006c-2.912.007-5.174.87-6.716 2.565-1.48 1.622-2.243 3.957-2.27 6.932v.017c.027 2.973.789 5.307 2.27 6.928 1.54 1.692 3.803 2.554 6.716 2.56h.007c3.054-.007 5.025-.859 6.215-2.69.514-.79.877-1.754 1.105-2.948-.58.564-1.248 1.02-1.986 1.356-1.097.5-2.306.754-3.587.754-2.056 0-3.847-.618-5.177-1.785-1.384-1.214-2.14-2.906-2.14-4.775 0-1.893.761-3.584 2.14-4.761 1.33-1.141 3.121-1.759 5.177-1.759 1.676 0 3.168.482 4.318 1.398.896.715 1.58 1.675 2.035 2.857l-.001-.09v-.005c0-.644.523-1.166 1.166-1.166h1.667v7c0 2.68-.658 4.907-1.957 6.62-1.728 2.274-4.556 3.427-8.406 3.427zM12 4.5c-1.676 0-3.118.5-4.168 1.446-1.018.916-1.587 2.182-1.587 3.554s.569 2.638 1.587 3.554c1.05.946 2.492 1.446 4.168 1.446s3.118-.5 4.168-1.446c1.018-.916 1.587-2.182 1.587-3.554s-.569-2.638-1.587-3.554C15.118 5 13.676 4.5 12 4.5z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- YouTube -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- X (Twitter) -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- TikTok -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Weibo -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.68 14.94c-.88.18-1.55.76-1.5 1.3.05.52.86.82 1.74.64.88-.18 1.55-.76 1.5-1.3-.05-.52-.86-.82-1.74-.64zm2.2-.84c-.32.06-.54.26-.5.44.04.18.3.28.62.22.32-.06.54-.26.5-.44-.04-.18-.3-.28-.62-.22zm2.64-1.12c-2.04-.26-4.34.46-5.42 1.76-1.12 1.34-.9 2.82.48 3.7 1.44.92 3.54 1.04 5.22.26 1.64-.76 2.52-2.1 1.88-3.34-.4-.78-1.3-1.28-2.16-1.38z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Youku -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- WeChat -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Discord -->
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 my-8"></div>
+
+            <!-- Disclaimer Text -->
+            <div class="text-xs text-gray-500 leading-relaxed space-y-6 mb-8">
+                <p>* The consumption and emissions values in the website refer to your geographical IP. This value might be unrealistic if you navigate using VPN or if the position of your Internet provider is imprecise. If you believe you are incorrectly geolocalized, contact your dealer to get valid consumption and emissions information in your area.</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 my-8"></div>
+
+            <!-- Copyright & Legal -->
+            <div class="text-xs text-gray-500 leading-relaxed space-y-4">
+                <p>Copyright © 2025 Automobili Lamborghini S.p.A. a company with sole shareholder subject to the management and coordination of AUDI AG.</p>
+                <p>All rights reserved. VAT no. IT 00591801204</p>
+                <p class="font-bold text-white mt-4">WARNING ABOUT ILLEGAL OFFERS OF ALLEGED SHARES OF AUTOMOBILI LAMBORGHINI S.P.A.</p>
+                <p>Automobili Lamborghini S.p.A. got the notice that several third parties across different countries are allegedly offering shares in Automobili Lamborghini S.p.A. These offers are unlawful and originate neither from Volkswagen Aktiengesellschaft nor from any of its subsidiaries.</p>
+            </div>
+
+            <!-- Bottom Logo -->
+            <div class="flex justify-center mt-12">
+                <img src="img/logolamborghini.svg" alt="Lamborghini Logo" class="h-12 w-auto opacity-50">
+            </div>
+        </div>
+    </footer>
